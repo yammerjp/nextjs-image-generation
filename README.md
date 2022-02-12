@@ -9,6 +9,9 @@ https://ji23-dev.com/blogs/nextjs-ogp
 First, run the development server:
 
 ```bash
+git clone https://github.com/yammerjp/nextjs-image-generation.git
+cd nextjs-image-generation
+npm install
 npm run dev
 ```
 
