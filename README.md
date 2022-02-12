@@ -15,18 +15,23 @@ npm install
 npm run dev
 ```
 
-Next, download image
+Show the page `http://localhost:3000`, or download image
 
 ```bash
-curl localhost:3000/api/image --output download.png
+curl localhost:3000/api/recharts-to-image.svg --output recharts-to-image.svg
+curl localhost:3000/api/recharts-to-image.png --output recharts-to-image.png
 ```
 
-Open download.png, to confirm server-side image generation.
+Open recharts-to-image.png, to confirm server-side image generation.
 
 ## Sample Image
 
 This is the image with server-side image generation.
 
-![](./generated-image.png)
+### PNG
+![](./generation-sample/recharts-to-image.png)
+
+### SVG
+![](./generation-sample/recharts-to-image.svg)
 
 
