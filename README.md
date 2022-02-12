@@ -20,5 +20,10 @@ curl localhost:3000/api/image --output download.png
 
 Open download.png, to confirm server-side image generation.
 
+## Sample Image
+
+This is the image with server-side image generation.
+
+![](./generated-image.png)
 
 
