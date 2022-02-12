@@ -2,8 +2,9 @@
 //
 import ReactDOMServer from 'react-dom/server';
 import rechartElement from '../../components/graph'
+import { parse } from 'node-html-parser'
 
-const createOgp = async (
+const svg = async (
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> => {
@@ -14,9 +15,12 @@ const createOgp = async (
   });
   //res.end(buffer, "binary");
   //
-  res.write(ReactDOMServer.renderToString(rechartElement()))
+  const htmlStringRoot = ReactDOMServer.renderToString(rechartElement())
+  const svgString = parse(htmlStringRoot).querySelector("svg").toString()
+
+  res.write(svgString)
   res.end()
 };
 
-export default createOgp;
+export default svg;
 
